@@ -2,7 +2,7 @@ package nsgl.exception;
 
 import java.util.NoSuchElementException;
 
-import nsgl.array.ArrayUtil;
+import nsgl.type.array.ArrayUtil;
 
 public class NoSuchElement {
 	public static final String NOSUCHELEMENT = "NoSuchElementException";

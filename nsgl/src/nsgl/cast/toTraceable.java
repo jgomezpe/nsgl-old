@@ -38,7 +38,7 @@
  */
 package nsgl.cast;
 
-import nsgl.object.Traceable;
+import nsgl.type.object.Traceable;
 /**
  * <p>Title: toTraceable</p>
  *

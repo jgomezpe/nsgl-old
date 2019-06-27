@@ -40,8 +40,8 @@ package nsgl.cast;
 
 import java.lang.reflect.Array;
 
-import nsgl.object.Cloneable;
 import nsgl.service.Clone;
+import nsgl.type.object.Cloneable;
 /**
  * <p>Title: toCloneable</p>
  *

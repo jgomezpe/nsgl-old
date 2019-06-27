@@ -3,9 +3,10 @@ package nsgl.math;
 import java.util.Iterator;
 
 import nsgl.cast.Cast;
-import nsgl.collection.Collection;
-import nsgl.collection.Mutable;
-import nsgl.object.Traceable;
+import nsgl.type.collection.Collection;
+import nsgl.type.collection.Mutable;
+import nsgl.type.object.Tagged;
+import nsgl.type.object.Traceable;
 
 /**
  * <p>Abstract definition of a function</p>
@@ -74,6 +75,32 @@ public abstract class Function<S, T> implements Runnable{
 	@SuppressWarnings("unchecked")
 	public void set_apply( Collection<?> set, Mutable<T> target ){ for( Object x : set ) target.add(apply((S)x)); }
 
+	// Tagged objects
+	/**
+	 * Computes the function
+	 * @param x Parameter of the function
+	 * @return Computed value of the function
+	 */
+	@SuppressWarnings("unchecked")
+	public T apply(Tagged<S> x){
+		S xo = x.unwrap();
+		if( deterministic() ){
+			T y = (T)x.getTag(this);
+			if( y!=null ) return y;
+			y = apply(xo);
+			x.setTag(this, y);
+			return y;
+		}else return apply(xo);
+	}
+
+	public T[] set_apply( Tagged<S>[] x ){
+		@SuppressWarnings("unchecked")
+		T[] r = (T[])new Object[x.length];
+		for( int i=0; i<x.length; i++) r[i] = apply(x[i]);
+		return r;
+	}
+
+	
 	// As a thread
 	
 	protected S input;

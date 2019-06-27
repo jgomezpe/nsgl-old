@@ -41,7 +41,7 @@ package nsgl.cast;
 import java.lang.reflect.Array;
 
 import nsgl.cast.Cast;
-import nsgl.object.Describable;
+import nsgl.type.object.Describable;
 
 /**
  * <p>Title: toComparable</p>

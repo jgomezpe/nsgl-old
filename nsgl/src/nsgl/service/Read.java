@@ -2,7 +2,7 @@ package nsgl.service;
 import java.io.IOException;
 
 import nsgl.exception.IO;
-import nsgl.iterator.Backable;
+import nsgl.type.collection.iterator.Backable;
 
 //
 //Unalcol Service structure Pack 1.0 by Jonatan Gomez-Perdomo

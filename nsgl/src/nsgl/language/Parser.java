@@ -3,7 +3,7 @@ package nsgl.language;
 import java.io.IOException;
 
 import nsgl.exception.IO;
-import nsgl.vector.Vector;
+import nsgl.type.array.Vector;
 
 public abstract class Parser{
 	protected int pos;
@@ -25,7 +25,7 @@ public abstract class Parser{
 	protected abstract Typed process() throws IOException;
 	
 	protected Token next() throws IOException{
-		if( pos == tokens.size() ) throw IO.exception(IO.UNEXPECTED, IO.EOI);
+		if( pos == tokens.size() ) throw IO.exception(IO.EOI);
 		token = tokens.get(pos);
 		pos++;
 		return token;

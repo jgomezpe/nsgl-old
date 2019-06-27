@@ -1,6 +1,6 @@
 package nsgl.tracer;
 import nsgl.service.Tracer;
-import nsgl.vector.Vector;
+import nsgl.type.array.Vector;
 
 public class VectorTracer implements Tracer {
 	/**

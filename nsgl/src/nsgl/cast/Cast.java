@@ -37,7 +37,7 @@
  * @version 1.0
  */
 package nsgl.cast;
-import nsgl.keymap.HashMap;
+import nsgl.type.keymap.HashMap;
 /**
  * <p>Title: Cast</p>
  *

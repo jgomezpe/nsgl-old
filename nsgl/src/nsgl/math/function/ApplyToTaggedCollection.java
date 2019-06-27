@@ -2,9 +2,9 @@ package nsgl.math.function;
 
 import java.util.Iterator;
 
-import nsgl.collection.Collection;
 import nsgl.math.Function;
-import nsgl.object.Tagged;
+import nsgl.type.collection.Collection;
+import nsgl.type.object.Tagged;
 
 public class ApplyToTaggedCollection<S,T>  implements Collection<T>{
 	protected Function4Tagged<S,T> function;

@@ -38,9 +38,9 @@
  */
 package nsgl.cast;
 
-import nsgl.object.Comparable;
 import nsgl.service.Comparator;
 import nsgl.service.Order;
+import nsgl.type.object.Comparable;
 /**
  * <p>Title: toComparable</p>
  *

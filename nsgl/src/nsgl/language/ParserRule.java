@@ -1,6 +1,6 @@
 package nsgl.language;
 
-import nsgl.vector.Vector;
+import nsgl.type.array.Vector;
 
 public class ParserRule extends Typed{
 	protected int min = 1;

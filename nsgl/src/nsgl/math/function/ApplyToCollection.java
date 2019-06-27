@@ -2,8 +2,8 @@ package nsgl.math.function;
 
 import java.util.Iterator;
 
-import nsgl.collection.Collection;
 import nsgl.math.Function;
+import nsgl.type.collection.Collection;
 
 public class ApplyToCollection<S,T> implements Collection<T>{
 	protected Function<S,T> function;

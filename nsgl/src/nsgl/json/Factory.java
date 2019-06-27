@@ -1,7 +1,7 @@
 package nsgl.json;
 
 import nsgl.json.JSON;
-import nsgl.keymap.HashMap;
+import nsgl.type.keymap.HashMap;
 
 public class Factory<T> implements JSON2Instance<T>{
 	public static final String TYPE = "type";

@@ -6,12 +6,13 @@ import java.util.regex.Pattern;
 
 import nsgl.language.lexeme.CharLexeme;
 import nsgl.exception.IO;
-import nsgl.language.lexeme.IntegerLexeme;
+import nsgl.exception.ProcessException;
+import nsgl.language.lexeme.IntLexeme;
 import nsgl.language.lexeme.RealLexeme;
 import nsgl.language.lexeme.SpaceLexeme;
 import nsgl.language.lexeme.StringLexeme;
 import nsgl.language.lexeme.SymbolLexeme;
-import nsgl.vector.Vector;
+import nsgl.type.array.Vector;
 
 public class Lexer extends LexemeSet{
 	public Lexer(){}
@@ -35,15 +36,11 @@ public class Lexer extends LexemeSet{
 		Vector<Token> tokens = process( pattern(), input, start );
 		Vector<Object> exceptions = new Vector<Object>();
 		for( Token t:tokens ) {
-			if( t.pos()!=start ) {
-				exceptions.add(IO.UNEXPECTED);
-				exceptions.add(input.substring(start, t.pos()));
-				exceptions.add(start);
-			}
+			if( t.pos()!=start ) exceptions.add(new Object[]{IO.UNEXPECTED, input.substring(start, t.pos()), start});
 			start = t.pos()+t.length();
 		}
 		if( exceptions.size()==0 ) return tokens;
-		exceptions.add(0,IO.MULTIPLE);
+		exceptions.add(0,ProcessException.MULTIPLE);
 		throw IO.exception(exceptions.toArray());
 	}
 	
@@ -58,7 +55,7 @@ public class Lexer extends LexemeSet{
 	
 	public static void main( String[] args ){
 		Lexer lexer = new Lexer();
-		lexer.add( new IntegerLexeme() );
+		lexer.add( new IntLexeme() );
 		lexer.add( new RealLexeme() );
 		lexer.add( new StringLexeme() );
 		lexer.add( new CharLexeme() );

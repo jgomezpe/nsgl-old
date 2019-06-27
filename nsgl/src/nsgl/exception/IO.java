@@ -2,7 +2,7 @@ package nsgl.exception;
 
 import java.io.IOException;
 
-import nsgl.array.ArrayUtil;
+import nsgl.type.array.ArrayUtil;
 
 public class IO {
 	public static final String IOEXCEPTION = "IOException";
@@ -15,7 +15,6 @@ public class IO {
 	public static final String UNEXPECTED = "unexpected";
 	public static final String NOSTRING = "nostring";
 	public static final String NOESCAPE = "noescapechar";
-	public static final String MULTIPLE = "multiple";
 	public static final String OTHER = "other";
 	
 	public static IOException exception( Object... args ){ return new IOException(ArrayUtil.store(args)); }

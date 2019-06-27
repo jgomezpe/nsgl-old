@@ -3,10 +3,10 @@ package nsgl.math.function;
 import java.lang.reflect.ParameterizedType;
 import java.util.Iterator;
 
-import nsgl.collection.Collection;
-import nsgl.collection.Mutable;
 import nsgl.math.Function;
-import nsgl.object.Tagged;
+import nsgl.type.collection.Collection;
+import nsgl.type.collection.Mutable;
+import nsgl.type.object.Tagged;
 
 public class Function4Tagged<S,T> extends Function<S, T>{
 	protected Function<S, T> f;

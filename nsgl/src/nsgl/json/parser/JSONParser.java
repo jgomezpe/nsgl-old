@@ -8,7 +8,7 @@ import nsgl.language.Parser;
 import nsgl.language.Token;
 import nsgl.language.Typed;
 import nsgl.language.TypedValue;
-import nsgl.vector.Vector;
+import nsgl.type.array.Vector;
 
 public class JSONParser extends Parser{
 	protected char S = '#'; 

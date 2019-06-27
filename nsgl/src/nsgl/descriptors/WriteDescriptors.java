@@ -3,9 +3,9 @@ package nsgl.descriptors;
 import java.io.IOException;
 import java.io.Writer;
 
-import nsgl.object.Describable;
-import nsgl.object.Writable;
 import nsgl.service.Write;
+import nsgl.type.object.Describable;
+import nsgl.type.object.Writable;
 
 //
 //Unalcol Service structure Pack 1.0 by Jonatan Gomez-Perdomo

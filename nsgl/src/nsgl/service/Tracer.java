@@ -38,8 +38,8 @@
  */
 package nsgl.service;
 
-import nsgl.object.Cleanable;
-import nsgl.object.Closable;
+import nsgl.type.object.Cleanable;
+import nsgl.type.object.Closable;
 
 //
 //Unalcol Service structure Pack 1.0 by Jonatan Gomez-Perdomo

@@ -42,7 +42,7 @@ import java.io.IOException;
 import java.io.Writer;
 
 import nsgl.cast.Cast;
-import nsgl.object.Writable;
+import nsgl.type.object.Writable;
 
 /**
  * <p>Title: toWritable</p>

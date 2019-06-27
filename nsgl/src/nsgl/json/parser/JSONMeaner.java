@@ -7,8 +7,8 @@ import nsgl.language.Meaner;
 import nsgl.language.Token;
 import nsgl.language.Typed;
 import nsgl.language.TypedValue;
-import nsgl.object.Pair;
-import nsgl.vector.Vector;
+import nsgl.type.array.Vector;
+import nsgl.type.object.Pair;
 
 public class JSONMeaner implements Meaner<Object>{
 	protected LexemeSet lexemes;

@@ -3,10 +3,10 @@ package nsgl.json;
 import nsgl.json.parser.JSONLexer;
 import nsgl.json.parser.JSONMeaner;
 import nsgl.json.parser.JSONParser;
-import nsgl.keymap.HashMap;
 import nsgl.language.Language;
-import nsgl.object.Cloneable;
-import nsgl.string.StringUtil;
+import nsgl.type.keymap.HashMap;
+import nsgl.type.object.Cloneable;
+import nsgl.type.string.StringUtil;
 
 public class JSON extends HashMap<String, Object> implements Cloneable{
 	protected static Language<Object> lang = null;
@@ -145,14 +145,4 @@ public class JSON extends HashMap<String, Object> implements Cloneable{
 		sb.append('}');
 		return sb.toString();
 	}
-	
-	public static void main( String[] args ) {
-		String msg = "{\"array\":[1234,\"dummy\",\"A\",[34.20,\"F\",\"mo\\\"re\\\"\"]],\"nway\":true}";
-		try {
-			JSON json = new JSON( msg );
-			System.out.println(json);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}	
-	}		
 }

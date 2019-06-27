@@ -1,8 +1,8 @@
 package nsgl.store;
 import java.util.Iterator;
 
-import nsgl.keymap.HashMap;
-import nsgl.keymap.KeyMap;
+import nsgl.type.keymap.HashMap;
+import nsgl.type.keymap.KeyMap;
 
 public interface DataStore {
 	static KeyMap<String,Object> entity( String name ){

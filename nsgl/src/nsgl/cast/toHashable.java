@@ -38,8 +38,8 @@
  */
 package nsgl.cast;
 
-import nsgl.object.Hashable;
-import nsgl.object.Sortable;
+import nsgl.type.object.Hashable;
+import nsgl.type.object.Sortable;
 
 /**
  * <p>Title: toHashable</p>

@@ -38,8 +38,8 @@
  */
 package nsgl.cast;
 
-import nsgl.object.Sortable;
 import nsgl.service.Order;
+import nsgl.type.object.Sortable;
 
 /**
  * <p>Title: toSortable</p>

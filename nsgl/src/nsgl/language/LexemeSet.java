@@ -3,7 +3,7 @@ package nsgl.language;
 import java.util.regex.Pattern;
 
 import nsgl.exception.NoSuchElement;
-import nsgl.keymap.HashMap;
+import nsgl.type.keymap.HashMap;
 
 public class LexemeSet {
 	protected HashMap<Character,Lexeme> lexemes = new HashMap<Character,Lexeme>();

@@ -3,10 +3,10 @@ package nsgl.io;
 import java.io.Closeable;
 import java.util.Iterator;
 
-import nsgl.collection.Collection;
-import nsgl.iterator.BTWrap;
-import nsgl.iterator.Iterator2DPosition;
-import nsgl.iterator.IteratorPosition;
+import nsgl.type.collection.Collection;
+import nsgl.type.collection.iterator.BTWrap;
+import nsgl.type.collection.iterator.Iterator2DPosition;
+import nsgl.type.collection.iterator.IteratorPosition;
 
 public abstract class Reader implements Collection<Integer>, Closeable{
 	/**

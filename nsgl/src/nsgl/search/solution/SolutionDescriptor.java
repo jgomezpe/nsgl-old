@@ -1,7 +1,7 @@
 package nsgl.search.solution;
 
 import nsgl.search.Goal;
-import nsgl.service.Descriptor;
+import nsgl.service.description.Descriptor;
 import nsgl.type.object.Tagged;
 
 public class SolutionDescriptor<T> implements Descriptor{

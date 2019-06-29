@@ -7,15 +7,16 @@ import org.fife.ui.rsyntaxtextarea.Token;
 import org.fife.ui.rsyntaxtextarea.TokenImpl;
 import org.fife.ui.rsyntaxtextarea.TokenMaker;
 
-import nsgl.type.collection.Collection;
+import nsgl.language.Lexer;
+import nsgl.type.array.Vector;
 import nsgl.type.keymap.KeyMap;
 
 
 public class RSyntaxTokenMaker implements TokenMaker{
 	public static RSyntaxTokenMaker lastInstance=null;
 	
-	protected Tokenizer tokenizer;
-	protected KeyMap<Integer, Integer> converter;
+	protected Lexer lexer;
+	protected KeyMap<Character, Integer> converter;
 	protected TokenImpl firstToken=null;
 	protected TokenImpl lastToken=null;
 	protected int src;
@@ -24,8 +25,8 @@ public class RSyntaxTokenMaker implements TokenMaker{
 		lastInstance = this;
 	}
 	
-	public void setTokenizer( int src, Tokenizer tokenizer, KeyMap<Integer, Integer> converter ){
-		this.tokenizer = tokenizer;
+	public void setLexer( int src, Lexer lexer, KeyMap<Character, Integer> converter ){
+		this.lexer = lexer;
 		this.converter = converter;
 		this.src = src;
 	}
@@ -111,9 +112,9 @@ public class RSyntaxTokenMaker implements TokenMaker{
 		String input = text.toString();
 		int count = input.length();
 		if( input != null && input.length()>0 ){
-			Collection<GeneralizedToken<Integer>> token = tokenizer.apply(input, src);
-			for( GeneralizedToken<Integer> t:token ){
-				int start = t.pos()[2]-1 + offset;
+			Vector<nsgl.language.Token> token = lexer.process(input);
+			for( nsgl.language.Token t:token ){
+				int start = t.pos()-1 + offset;
 				if( start>currentTokenStart ) addToken(array, currentTokenStart,start-1, Token.WHITESPACE, newStartOffset+currentTokenStart);
 				currentTokenStart = start;
 				try{ addToken(array, currentTokenStart, start+t.length()-1, converter.get(t.type()), newStartOffset+currentTokenStart); }catch(Exception e){}

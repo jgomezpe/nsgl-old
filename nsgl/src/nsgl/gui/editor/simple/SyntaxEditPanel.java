@@ -1,7 +1,6 @@
 package nsgl.gui.editor.simple;
 
 import java.awt.Color;
-import java.util.Vector;
 
 import javax.swing.JTextPane;
 import javax.swing.SwingUtilities;
@@ -14,15 +13,16 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyleContext;
 import javax.swing.text.StyledDocument;
 
+import nsgl.language.Lexer;
 import nsgl.language.Token;
-import nsgl.type.collection.Collection;
+import nsgl.type.array.Vector;
 import nsgl.type.keymap.KeyMap;
 
 public class SyntaxEditPanel extends JTextPane implements SyntaxEditComponent{
 	protected SyntaxStyle def;
 	protected KeyMap<String,SyntaxStyle> styles;
-	protected KeyMap<Integer,String> token_style=null;
-	protected Tokenizer tokenizer=null;
+	protected KeyMap<Character,String> token_style=null;
+	protected Lexer lexer=null;
 	
 	/**
 	 * 
@@ -34,8 +34,8 @@ public class SyntaxEditPanel extends JTextPane implements SyntaxEditComponent{
 		this.getDocument().addDocumentListener(new SyntaxDocumentListener());
 	}
 	
-	public void setTokenizer(Tokenizer tokenizer, KeyMap<Integer,String> token_style){
-		this.tokenizer = tokenizer;
+	public void setLexer(Lexer lexer, KeyMap<Character,String> token_style){
+		this.lexer = lexer;
 		this.token_style = token_style;
 		update();
 	}
@@ -88,9 +88,9 @@ public class SyntaxEditPanel extends JTextPane implements SyntaxEditComponent{
 				String code = null;
 		        try{ code = doc.getText(start, length); } catch (BadLocationException e1) {}
 		        if( code != null && code.length()>0 ){
-					Collection<GeneralizedToken<Integer>> token = tokenizer.apply(code);
-					for( GeneralizedToken<Integer> t:token ){
-						((Position2DTrack)t.pos()).shift(start);
+					Vector<Token> token = lexer.process(code);
+					for( Token t:token ){
+						t.shift(start);
 						changes.add((Token)t);
 					}
 		        }
@@ -102,7 +102,7 @@ public class SyntaxEditPanel extends JTextPane implements SyntaxEditComponent{
 				public void run() {
 					try{
 						for( Token t:changes )
-							doc.setCharacterAttributes(((Position2DTrack)t.pos()).offset(),t.length(),doc.getStyle(token_style.get(t.type())),true);
+							doc.setCharacterAttributes(t.pos(),t.length(),doc.getStyle(token_style.get(t.type())),true);
 	    			}catch(Exception e){}
 				}
 	        };

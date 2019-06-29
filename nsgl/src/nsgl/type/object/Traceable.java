@@ -42,9 +42,9 @@ package nsgl.type.object;
 import java.io.IOException;
 import java.util.Vector;
 
-import nsgl.cast.Cast;
-import nsgl.cast.toTraceable;
-import nsgl.service.Tracer;
+import nsgl.service.trace.Tracer;
+import nsgl.type.object.cast.Cast;
+import nsgl.type.object.cast.toTraceable;
 /**
  * <p>Title: Traceable</p>
  *
@@ -96,7 +96,7 @@ public class Traceable {
 	 */
 	public void closeTracers(){ for( Tracer t:tracers ) try{ t.close(); }catch(IOException e){}; }	
 	
-	public Traceable cast( Object obj ){
+	public static Traceable cast( Object obj ){
 		if( obj instanceof Traceable ) return (Traceable)obj;
     	@SuppressWarnings("unchecked")
 		Cast<Traceable> cast = (Cast<Traceable>)Cast.service(obj,Traceable.class);

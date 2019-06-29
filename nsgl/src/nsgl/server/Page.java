@@ -1,6 +1,6 @@
 package nsgl.server;
 
-import nsgl.json.JSON;
+import nsgl.type.json.JSON;
 
 public class Page {
 	protected String url;

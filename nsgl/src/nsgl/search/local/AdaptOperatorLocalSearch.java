@@ -5,6 +5,7 @@ import nsgl.search.replacement.GoalBasedReplacement;
 import nsgl.search.space.Space;
 import nsgl.search.variation.Variation_1_1;
 import nsgl.type.object.Tagged;
+import nsgl.type.object.Traceable;
 
 public class AdaptOperatorLocalSearch<T,P> extends VariationReplaceLocalSearch<T>{
     protected AdaptSearchOperatorParameters<P> adapt;
@@ -23,7 +24,7 @@ public class AdaptOperatorLocalSearch<T,P> extends VariationReplaceLocalSearch<T
 		Tagged<T> y = variation.apply(space, x);
         if( adapt != null )	adapt.apply(variation, goal.apply(x), goal.apply(y));
         Tagged<T> z = replace.apply(x, y);
-        trace(x, z);
+        Traceable.cast(this).trace(x, z);
         return z;
     }    
 }

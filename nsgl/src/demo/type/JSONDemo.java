@@ -3,8 +3,8 @@ package demo.type;
 import nsgl.exception.IO;
 import nsgl.exception.ProcessException;
 import nsgl.exception.ProcessExceptionWithJSON;
-import nsgl.json.JSON;
-import nsgl.json.parser.JSONParser;
+import nsgl.type.json.JSON;
+import nsgl.type.json.parser.JSONParser;
 
 public class JSONDemo {
 	public static JSON exception_manager(){

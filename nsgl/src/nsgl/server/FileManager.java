@@ -70,7 +70,7 @@ public class FileManager {
 		else store(name, type, data);
 	}
 	
-	public void upload( Command cmd ){
+	public void upload( ServerCommand cmd ){
 		pack = cmd.platform();
 		upload( (String)cmd.arg(0), (byte[])cmd.arg(1));
 	}
@@ -88,7 +88,7 @@ public class FileManager {
 		return null;
 	}
 	
-	public byte[] download( Command cmd ){
+	public byte[] download( ServerCommand cmd ){
 		pack = cmd.platform();
 		return download( (String)cmd.arg(0) );
 	}

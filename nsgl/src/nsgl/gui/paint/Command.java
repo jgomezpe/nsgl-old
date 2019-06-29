@@ -1,7 +1,7 @@
 package nsgl.gui.paint;
 
+import nsgl.type.json.JSON;
 import nsgl.type.object.Cloneable;
-import nsgl.json.JSON;
 
 public class Command extends JSON{
 	public final static String COMMAND="command";

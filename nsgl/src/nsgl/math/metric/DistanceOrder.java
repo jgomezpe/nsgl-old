@@ -1,6 +1,6 @@
 package nsgl.math.metric;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.real.RealOrder;
 
 public class DistanceOrder<T> implements Order{

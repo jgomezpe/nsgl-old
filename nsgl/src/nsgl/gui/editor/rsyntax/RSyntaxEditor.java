@@ -8,9 +8,9 @@ import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rsyntaxtextarea.TokenMakerFactory;
 import org.fife.ui.rtextarea.RTextScrollPane;
 
-import nsgl.keymap.KeyMap;
+import nsgl.language.Lexer;
+import nsgl.type.keymap.KeyMap;
 import nsgl.gui.editor.AWTEditor;
-import nsgl.io.Tokenizer;
 
 public class RSyntaxEditor extends AWTEditor{
 	protected AbstractTokenMakerFactory atmf = (AbstractTokenMakerFactory)TokenMakerFactory.getDefaultInstance();
@@ -35,7 +35,8 @@ public class RSyntaxEditor extends AWTEditor{
 	public int src(){ return src; }
     
 	@SuppressWarnings("unchecked")
-	public void setTokenizer( Tokenizer tokenizer, KeyMap<Integer, ?> converter ){ this.tok.setTokenizer(src, tokenizer, (KeyMap<Integer,Integer>)converter); }
+	@Override
+	public void setLexer( Lexer tokenizer, KeyMap<Character, ?> converter ){ this.tok.setLexer(src, tokenizer, (KeyMap<Character,Integer>)converter); }
 	
 	public JTextComponent editArea(){
 		if( editArea==null ) editArea = new RSyntaxTextArea();

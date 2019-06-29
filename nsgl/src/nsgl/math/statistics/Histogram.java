@@ -2,7 +2,7 @@ package nsgl.math.statistics;
 
 import java.util.Iterator;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.array.SortedVector;
 import nsgl.type.object.Pair;
 import nsgl.type.object.PairAOrder;

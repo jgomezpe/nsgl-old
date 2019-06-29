@@ -2,8 +2,8 @@ package nsgl.type.object;
 
 import java.io.IOException;
 
-import nsgl.cast.Cast;
 import nsgl.type.collection.iterator.Backable;
+import nsgl.type.object.cast.Cast;
 
 public interface Readable {
 	/**

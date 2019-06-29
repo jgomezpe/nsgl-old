@@ -2,7 +2,7 @@ package nsgl.language;
 
 import java.util.regex.Pattern;
 
-import nsgl.exception.NoSuchElement;
+import nsgl.exception.NoSuch;
 import nsgl.type.keymap.HashMap;
 
 public class LexemeSet {
@@ -41,7 +41,7 @@ public class LexemeSet {
 	
 	public Object map( Token token ) throws Exception{
 		Lexeme l = lexemes.get(token.type());
-		if( l==null ) throw NoSuchElement.exception(NoSuchElement.INVALIDLOCATION, token.type());
+		if( l==null ) throw NoSuch.exception(NoSuch.NOSUCHELEMENT, token.type());
 		return l.instance(token.value());
 	}
 }

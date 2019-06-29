@@ -1,8 +1,8 @@
 package nsgl.search.selection;
 
 import nsgl.search.Goal;
-import nsgl.service.Order;
-import nsgl.service.ReversedOrder;
+import nsgl.service.sort.Order;
+import nsgl.service.sort.ReversedOrder;
 import nsgl.type.array.SortedVector;
 import nsgl.type.integer.random.RouletteInt;
 import nsgl.type.object.Pair;

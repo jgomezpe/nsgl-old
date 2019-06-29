@@ -1,7 +1,7 @@
 package nsgl.gui.editor;
 
-import nsgl.vc.js.JSView;
-import nsgl.vc.DefaultComponent;
+import nsgl.app.DefaultComponent;
+import nsgl.app.js.JSView;
 
 public class JSEditorView extends DefaultComponent implements JSView, EditorView{
 

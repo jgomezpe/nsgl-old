@@ -1,7 +1,7 @@
 package nsgl.search.selection;
 
 import nsgl.search.Goal;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.integer.random.RouletteInt;
 
 public class Roulette<T> extends GoalBasedSelection<T,Double>{

@@ -1,8 +1,8 @@
 package nsgl.type.array;
 import nsgl.math.Function;
-import nsgl.sort.Merge;
 import nsgl.type.object.Cloneable;
-import nsgl.service.Order;
+import nsgl.service.sort.Merge;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Title: </p>
@@ -20,13 +20,13 @@ public class VectorSort<T> extends Function<Vector<T>,Vector<T>> {
 
     protected boolean overwrite = true;
 
-    protected nsgl.sort.Sort<T> sort = null;
+    protected nsgl.service.sort.Sort<T> sort = null;
 
     public VectorSort(){
         sort = new Merge<T>();
     }
 
-    public VectorSort( nsgl.sort.Sort<T> _sort ) {
+    public VectorSort( nsgl.service.sort.Sort<T> _sort ) {
         sort = _sort;
     }
 

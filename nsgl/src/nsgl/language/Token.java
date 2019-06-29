@@ -13,6 +13,7 @@ public class Token extends TypedValue<String>{
 		this.pos = pos;
 	}	
 	
+	public int shift(int delta ) { return pos += delta; }
 	public int pos() { return pos; }
 	public int length() { return value.length(); }
 

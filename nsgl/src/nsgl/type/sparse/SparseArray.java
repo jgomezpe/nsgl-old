@@ -9,7 +9,7 @@ import nsgl.type.integer.IntOrder;
 import nsgl.type.object.Cloneable;
 import nsgl.type.object.Pair;
 import nsgl.type.object.PairAOrder;
-import nsgl.exception.NoSuchElement;
+import nsgl.exception.NoSuch;
 
 public class SparseArray<T> implements Array<T>, Cloneable {
     public SparseArray(){ vector = new SortedVector<Pair<Integer,T>>(new PairAOrder<Integer,T>(new IntOrder())); }
@@ -39,7 +39,7 @@ public class SparseArray<T> implements Array<T>, Cloneable {
 	@Override
 	public T obtain(Integer index) throws NoSuchElementException{
 		T v = get(index);
-		if( v==null ) throw NoSuchElement.exception(NoSuchElement.INDEXOUTBOUNDS, index);
+		if( v==null ) throw NoSuch.exception(NoSuch.INDEXOUTBOUNDS, index);
 		return v;
 	}
 	

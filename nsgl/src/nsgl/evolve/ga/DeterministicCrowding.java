@@ -3,7 +3,7 @@ package nsgl.evolve.ga;
 import nsgl.search.BasicGoalBased;
 import nsgl.search.RealQualityGoal;
 import nsgl.search.population.PopulationReplacement;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.object.Tagged;
 import nsgl.math.metric.QuasiMetric;
 

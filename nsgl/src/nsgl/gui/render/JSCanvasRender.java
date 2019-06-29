@@ -1,12 +1,12 @@
 package nsgl.gui.render;
 
+import nsgl.app.js.JSSimpleView;
 import nsgl.gui.paint.Canvas;
 import nsgl.gui.paint.CanvasRender;
 import nsgl.gui.paint.Drawable;
 import nsgl.gui.paint.JSCanvas;
 import nsgl.type.array.Vector;
 import nsgl.type.collection.Mutable;
-import nsgl.vc.js.JSSimpleView;
 
 public class JSCanvasRender extends JSSimpleView implements CanvasRender{
 	protected Vector<Drawable> objects = new Vector<Drawable>();

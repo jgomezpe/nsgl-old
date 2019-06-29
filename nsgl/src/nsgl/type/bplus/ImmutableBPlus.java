@@ -7,7 +7,7 @@ package nsgl.type.bplus;
 import java.util.NoSuchElementException;
 import java.util.Iterator;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.array.BinarySearch;
 import nsgl.type.bplus.memory.MemoryLeafNode;
 import nsgl.type.collection.Searchable;

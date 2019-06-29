@@ -3,6 +3,7 @@ package nsgl.server;
 import java.io.IOException;
 import java.util.Iterator;
 
+import nsgl.java.reflect.Command;
 import nsgl.store.DataQuery;
 import nsgl.store.DataStore;
 import nsgl.type.array.Vector;
@@ -18,7 +19,7 @@ public class MultiServer extends Server{
 	protected HashMap<String, DynServer> servers = new HashMap<String,DynServer>();
 	
 	@Override
-	public Response process(Command command) throws IOException {
+	public Response process(ServerCommand command) throws IOException {
 		String platform = command.platform();
 		DynServer server = servers.get(platform); 
 		if( server==null ) {

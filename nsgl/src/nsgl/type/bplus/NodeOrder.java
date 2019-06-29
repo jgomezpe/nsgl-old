@@ -4,7 +4,7 @@
  */
 package nsgl.type.bplus;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  *

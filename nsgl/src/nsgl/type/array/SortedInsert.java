@@ -1,7 +1,7 @@
 package nsgl.type.array;
 
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Title: SortedInsert</p>

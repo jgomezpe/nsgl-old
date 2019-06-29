@@ -1,6 +1,6 @@
 package nsgl.gui.render;
 
-import nsgl.vc.View;
+import nsgl.app.View;
 
 public interface Render extends View{
 	void render();

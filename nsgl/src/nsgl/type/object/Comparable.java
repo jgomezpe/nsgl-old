@@ -38,8 +38,8 @@
  */
 package nsgl.type.object;
 
-import nsgl.cast.Cast;
-import nsgl.cast.toComparable;
+import nsgl.type.object.cast.Cast;
+import nsgl.type.object.cast.toComparable;
 
 /**
  * <p>Title: Comparable</p>

@@ -1,6 +1,6 @@
 package nsgl.type.integer;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Compares two Integer</p>

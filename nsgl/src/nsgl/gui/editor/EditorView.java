@@ -1,6 +1,6 @@
 package nsgl.gui.editor;
 
-import nsgl.vc.View;
+import nsgl.app.View;
 
 public interface EditorView extends View{
 	public void setText( String text );

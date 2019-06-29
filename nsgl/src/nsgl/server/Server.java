@@ -2,6 +2,7 @@ package nsgl.server;
 
 import java.io.IOException;
 
+import nsgl.java.reflect.Command;
 import nsgl.store.DataStore;
 import nsgl.type.array.Vector;
 import nsgl.type.keymap.HashMap;
@@ -26,7 +27,7 @@ public abstract class Server{
 	
 	public String name(){ return name; }
 
-	protected Session init(Command command){
+	protected Session init(ServerCommand command){
 		KeyMap<String,Object> platform = store.get(PLATFORM, NAME, name);
 		if( platform==null ) return null;
 		Long l = (Long)platform.get(TIMEOUT);
@@ -38,7 +39,7 @@ public abstract class Server{
 	
 	public abstract Response process( Session session, Command command ) throws IOException;
 	
-	public Response process( Command command ) throws IOException{
+	public Response process( ServerCommand command ) throws IOException{
 		command.platform = name;
 		String name = command.session();
 		Session session= (Session)sessions.get(name); 

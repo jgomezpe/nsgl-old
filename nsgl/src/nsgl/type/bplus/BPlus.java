@@ -1,6 +1,6 @@
 package nsgl.type.bplus;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.collection.Mutable;
 import nsgl.type.collection.Searchable;
 

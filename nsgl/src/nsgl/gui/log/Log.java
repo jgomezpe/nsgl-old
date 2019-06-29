@@ -1,6 +1,6 @@
 package nsgl.gui.log;
 
-import nsgl.vc.View;
+import nsgl.app.View;
 
 public interface Log extends View{
     public void display( boolean output );	

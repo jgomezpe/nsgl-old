@@ -11,6 +11,7 @@ import nsgl.search.replacement.Replacement;
 import nsgl.search.space.Space;
 import nsgl.search.variation.Variation_1_1;
 import nsgl.type.object.Tagged;
+import nsgl.type.object.Traceable;
 
 /**
  *
@@ -45,7 +46,7 @@ public class VariationReplaceLocalSearch<T> extends LocalSearch<T,Double>{
     public Tagged<T> apply(Tagged<T> x, Space<T> space){
         // Check if non stationary
 		Tagged<T> y = replace.apply(x,variation.apply(space, x));
-        trace(Tagged.class, x, PathTracer.PARENT, y);
+		Traceable.cast(this).trace(x, PathTracer.PARENT, y);
         return y;
     }
 }

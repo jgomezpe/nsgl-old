@@ -5,7 +5,7 @@ import java.io.Writer;
 
 import nsgl.exception.IO;
 import nsgl.search.Goal;
-import nsgl.service.Write;
+import nsgl.service.io.Write;
 import nsgl.type.object.Tagged;
 import nsgl.type.object.Writable;
 

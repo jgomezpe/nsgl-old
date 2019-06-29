@@ -38,9 +38,9 @@
  */
 package nsgl.type.object;
 
-import nsgl.cast.Cast;
-import nsgl.cast.toSortable;
 import nsgl.type.object.Comparable;
+import nsgl.type.object.cast.Cast;
+import nsgl.type.object.cast.toSortable;
 
 /**
  * <p>Title: Sortable</p>

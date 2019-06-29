@@ -1,8 +1,9 @@
 package nsgl.server;
 import java.io.IOException;
 
-import nsgl.io.FileResource;
+import nsgl.java.reflect.Command;
 import nsgl.java.reflect.FromMemory;
+import nsgl.service.io.FileResource;
 import nsgl.store.DataStore;
 import nsgl.type.array.Vector;
 import nsgl.type.keymap.KeyMap;

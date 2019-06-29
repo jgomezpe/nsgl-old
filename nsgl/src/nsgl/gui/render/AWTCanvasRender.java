@@ -6,6 +6,7 @@ import java.awt.Image;
 
 import javax.swing.JPanel;
 
+import nsgl.app.side.Side;
 import nsgl.gui.paint.AWTCanvas;
 import nsgl.gui.paint.Canvas;
 import nsgl.gui.paint.CanvasRender;
@@ -13,7 +14,6 @@ import nsgl.gui.paint.Drawable;
 import nsgl.type.array.Vector;
 import nsgl.type.collection.Mutable;
 import nsgl.type.keymap.HashMap;
-import nsgl.vc.Side;
 
 public class AWTCanvasRender extends JPanel implements CanvasRender{
 	protected Vector<Drawable> objects = new Vector<Drawable>();

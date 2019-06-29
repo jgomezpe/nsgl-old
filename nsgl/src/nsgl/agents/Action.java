@@ -43,4 +43,6 @@ public class Action {
 
 	@Override
 	public Action clone(){ return new Action(code); }
+	
+	public String toString() { return code; }
 }

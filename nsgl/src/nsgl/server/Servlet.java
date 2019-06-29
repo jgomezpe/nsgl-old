@@ -22,7 +22,7 @@ public class Servlet extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		try{
-			Command cmd = new Command(request.getHeader("object"), request.getHeader("method"), request.getInputStream());
+			ServerCommand cmd = new ServerCommand(request.getHeader("object"), request.getHeader("method"), request.getInputStream());
 			cmd.session(request.getRemoteAddr(), request.getHeader("navigator"), request.getHeader("platform"));
 			Response resp = server.process(cmd);
 			if( resp == null ){

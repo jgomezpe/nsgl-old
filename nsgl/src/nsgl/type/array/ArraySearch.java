@@ -1,6 +1,6 @@
 package nsgl.type.array;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Searching algorithm for sorted arrays of objects</p>

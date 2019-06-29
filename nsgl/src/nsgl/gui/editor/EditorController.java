@@ -1,6 +1,6 @@
 package nsgl.gui.editor;
 
-import nsgl.vc.Controller;
+import nsgl.app.Controller;
 
 public interface EditorController extends Controller{
 // Methods called by the View	

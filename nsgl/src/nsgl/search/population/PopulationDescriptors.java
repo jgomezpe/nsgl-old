@@ -2,7 +2,7 @@ package nsgl.search.population;
 
 import nsgl.search.BasicGoalBased;
 import nsgl.search.Goal;
-import nsgl.service.Descriptor;
+import nsgl.service.description.Descriptor;
 import nsgl.type.object.Tagged;
 import nsgl.type.real.Real;
 

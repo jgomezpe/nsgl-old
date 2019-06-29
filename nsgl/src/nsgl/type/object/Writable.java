@@ -7,8 +7,8 @@ package nsgl.type.object;
 import java.io.IOException;
 import java.io.Writer;
 
-import nsgl.cast.Cast;
-import nsgl.cast.toWritable;
+import nsgl.type.object.cast.Cast;
+import nsgl.type.object.cast.toWritable;
 
 /**
 *

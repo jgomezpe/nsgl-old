@@ -1,8 +1,8 @@
 package nsgl.gui.editor.simple;
 
 import nsgl.gui.paint.Color;
-import nsgl.json.JSON;
 import nsgl.type.array.Vector;
+import nsgl.type.json.JSON;
 import nsgl.type.keymap.HashMap;
 import nsgl.type.keymap.KeyMap;
 

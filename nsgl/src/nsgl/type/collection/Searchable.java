@@ -58,11 +58,5 @@ public interface Searchable<L,T> extends Checkable<T> {
 	 * @return <i>true</i>If the object belongs to the structure, <i>false</i> otherwise
 	 */
 	@Override
-	default boolean contains( T data ){
-		try{
-			find(data);
-			return true;
-		}catch(Exception e){ return false; }
-	}     	
-
+	default boolean contains( T data ){ return find(data)!=null; }     	
 }

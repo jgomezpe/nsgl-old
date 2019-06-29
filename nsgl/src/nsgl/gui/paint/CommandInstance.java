@@ -1,7 +1,7 @@
 package nsgl.gui.paint;
 
-import nsgl.json.JSON;
-import nsgl.json.JSON2Instance;
+import nsgl.type.json.JSON;
+import nsgl.type.json.JSON2Instance;
 
 public class CommandInstance implements JSON2Instance<Command>{
 	public CommandInstance() {}

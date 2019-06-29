@@ -1,6 +1,6 @@
 package nsgl.agents.examples.sudoku.naive;
 import nsgl.agents.search.*;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Title: </p>

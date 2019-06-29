@@ -1,6 +1,6 @@
 package nsgl.exception;
 
-import nsgl.json.JSON;
+import nsgl.type.json.JSON;
 
 public class ProcessExceptionWithJSON extends ProcessException {
 	protected JSON manager;

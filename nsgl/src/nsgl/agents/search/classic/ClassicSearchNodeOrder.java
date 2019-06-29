@@ -1,6 +1,6 @@
 package nsgl.agents.search.classic;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Title: </p>

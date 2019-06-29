@@ -38,8 +38,8 @@
  */
 package nsgl.type.object;
 
-import nsgl.cast.Cast;
-import nsgl.cast.toCloneable;
+import nsgl.type.object.cast.Cast;
+import nsgl.type.object.cast.toCloneable;
 
 /**
  * <p>Title: Cloneable</p>

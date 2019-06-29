@@ -1,6 +1,6 @@
 package nsgl.type.bplus.memory;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.bplus.BPlus;
 import nsgl.type.bplus.InnerNode;
 import nsgl.type.bplus.LeafNode;

@@ -1,6 +1,6 @@
 package nsgl.evolve.haea;
 
-import nsgl.service.Descriptor;
+import nsgl.service.description.Descriptor;
 import nsgl.type.object.Describable;
 
 public class HaeaStepDescriptor<T> implements Descriptor {

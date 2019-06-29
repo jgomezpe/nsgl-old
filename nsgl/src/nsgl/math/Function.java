@@ -2,11 +2,11 @@ package nsgl.math;
 
 import java.util.Iterator;
 
-import nsgl.cast.Cast;
 import nsgl.type.collection.Collection;
 import nsgl.type.collection.Mutable;
 import nsgl.type.object.Tagged;
 import nsgl.type.object.Traceable;
+import nsgl.type.object.cast.Cast;
 
 /**
  * <p>Abstract definition of a function</p>

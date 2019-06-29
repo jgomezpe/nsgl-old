@@ -1,6 +1,6 @@
 package nsgl.search.local;
 
-import nsgl.service.Tracer;
+import nsgl.service.trace.Tracer;
 import nsgl.type.object.Tagged;
 
 public class PathTracer<T> implements Tracer {

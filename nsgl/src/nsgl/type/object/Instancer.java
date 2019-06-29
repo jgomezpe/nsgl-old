@@ -40,7 +40,7 @@ package nsgl.type.object;
 
 import java.lang.reflect.Constructor;
 
-import nsgl.cast.Cast;
+import nsgl.type.object.cast.Cast;
 
 /**
  * <p>Title: Instancer</p>

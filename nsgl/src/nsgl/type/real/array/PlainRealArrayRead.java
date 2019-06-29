@@ -7,7 +7,7 @@ package nsgl.type.real.array;
 
 import java.io.IOException;
 
-import nsgl.service.Read;
+import nsgl.service.io.Read;
 import nsgl.type.collection.iterator.Backable;
 import nsgl.type.integer.PlainIntRead;
 import nsgl.type.real.PlainRealRead;

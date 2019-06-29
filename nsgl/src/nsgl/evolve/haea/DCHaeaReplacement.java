@@ -1,6 +1,6 @@
 package nsgl.evolve.haea;
 import nsgl.search.RealValuedGoal;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.object.Tagged;
 import nsgl.math.metric.QuasiMetric;
 

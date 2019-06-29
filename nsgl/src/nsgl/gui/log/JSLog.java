@@ -1,7 +1,7 @@
 package nsgl.gui.log;
 
-import nsgl.vc.DefaultComponent;
-import nsgl.vc.js.JSView;
+import nsgl.app.DefaultComponent;
+import nsgl.app.js.JSView;
 
 public class JSLog extends DefaultComponent implements JSView, Log{
 	protected String out="";

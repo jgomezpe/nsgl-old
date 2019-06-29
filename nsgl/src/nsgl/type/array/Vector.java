@@ -41,7 +41,7 @@ package nsgl.type.array;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import nsgl.exception.NoSuchElement;
+import nsgl.exception.NoSuch;
 import nsgl.type.object.Cloneable;
 /**
  * <p>Title: Vector</p>
@@ -244,7 +244,7 @@ public class Vector<T> extends Fibo implements Array<T>, Cloneable{
 	@Override
 	public T obtain(Integer index) throws NoSuchElementException{
 		try{ return buffer[index]; }
-		catch(IndexOutOfBoundsException e ){ throw NoSuchElement.exception(NoSuchElement.INDEXOUTBOUNDS, index);	} 
+		catch(IndexOutOfBoundsException e ){ throw NoSuch.exception(NoSuch.INDEXOUTBOUNDS, index);	} 
 	}
 
 	/**

@@ -2,7 +2,7 @@ package nsgl.type.array;
 
 import nsgl.exception.IO;
 import nsgl.language.Language;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.object.parser.ObjectLexer;
 import nsgl.type.object.parser.ObjectMeaner;
 import nsgl.type.object.parser.ObjectParser;

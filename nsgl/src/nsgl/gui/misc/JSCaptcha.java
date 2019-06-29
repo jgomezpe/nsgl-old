@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
 
-import nsgl.json.JSON;
+import nsgl.type.json.JSON;
 
 public class JSCaptcha {
 	protected boolean verified = false;

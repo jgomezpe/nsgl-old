@@ -1,8 +1,8 @@
 package nsgl.i18n;
 
-import nsgl.io.FileResource;
-import nsgl.json.JSON;
+import nsgl.service.io.FileResource;
 import nsgl.type.collection.Collection;
+import nsgl.type.json.JSON;
 
 public class I18N{
 	public static final String MSG = "msg";

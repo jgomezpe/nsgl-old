@@ -1,6 +1,6 @@
 package nsgl.gui.paint;
 
-import nsgl.json.JSON;
+import nsgl.type.json.JSON;
 import nsgl.type.keymap.HashMap;
 
 public abstract class Canvas{

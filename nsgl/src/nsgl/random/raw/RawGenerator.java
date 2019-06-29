@@ -1,6 +1,6 @@
 package nsgl.random.raw;
 
-import nsgl.cast.Cast;
+import nsgl.type.object.cast.Cast;
 
 // Unified Random generation Pack 1.0 by Jonatan Gomez-Perdomo
 // https://github.com/jgomezpe/unalcol/tree/master/random/

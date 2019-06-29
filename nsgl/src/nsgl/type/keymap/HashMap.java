@@ -41,12 +41,12 @@ package nsgl.type.keymap;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import nsgl.cast.Cast;
-import nsgl.exception.NoSuchElement;
+import nsgl.exception.NoSuch;
 import nsgl.type.collection.Collection;
 import nsgl.type.collection.Finite;
 import nsgl.type.object.Cloneable;
 import nsgl.type.object.Pair;
+import nsgl.type.object.cast.Cast;
 
 /**
  * <p>Title: HashMap</p>
@@ -95,7 +95,7 @@ public class HashMap<K,V> implements KeyMap<K,V>, Finite<V>, Cloneable{
 	@Override
 	public V obtain(K key) throws NoSuchElementException{
 		if(valid(key)) return table.get(key);
-		throw NoSuchElement.exception(NoSuchElement.INVALIDLOCATION, (String)Cast.apply(key, String.class));
+		throw NoSuch.exception(NoSuch.NOSUCHELEMENT, (String)Cast.apply(key, String.class));
 	}
 	
 	public void merge(KeyMap<K, V> newKeyValues ){

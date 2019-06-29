@@ -1,8 +1,8 @@
 package nsgl.search;
 
-import nsgl.service.Order;
 import nsgl.math.metric.Distance;
 import nsgl.math.metric.DistanceOrder;
+import nsgl.service.sort.Order;
 
 public abstract class DistanceToGoal<T,R> extends Goal<T,R>{
     protected Order order;

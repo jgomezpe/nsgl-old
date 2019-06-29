@@ -2,7 +2,7 @@ package nsgl.evolve.haea;
 import nsgl.search.BasicGoalBased;
 import nsgl.search.RealValuedGoal;
 import nsgl.search.population.PopulationReplacement;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.object.Tagged;
 
 /**

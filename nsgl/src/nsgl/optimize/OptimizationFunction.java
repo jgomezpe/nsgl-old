@@ -1,7 +1,7 @@
 package nsgl.optimize;
 import nsgl.search.RealValuedGoal;
-import nsgl.service.Order;
-import nsgl.service.ReversedOrder;
+import nsgl.service.sort.Order;
+import nsgl.service.sort.ReversedOrder;
 import nsgl.type.real.RealOrder;
 
 /**

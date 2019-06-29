@@ -2,8 +2,8 @@ package nsgl.gui.editor.simple;
 
 import nsgl.gui.paint.Color;
 import nsgl.gui.paint.ColorInstance;
-import nsgl.json.JSON;
-import nsgl.json.JSON2Instance;
+import nsgl.type.json.JSON;
+import nsgl.type.json.JSON2Instance;
 
 public class SyntaxStyleInstance implements JSON2Instance<SyntaxStyle>{
 	public static final String STYLE = "style";

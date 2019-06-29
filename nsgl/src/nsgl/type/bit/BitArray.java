@@ -1,7 +1,7 @@
 package nsgl.type.bit;
 import java.util.NoSuchElementException;
 
-import nsgl.exception.NoSuchElement;
+import nsgl.exception.NoSuch;
 import nsgl.type.array.Array;
 import nsgl.type.bit.random.RandBit;
 import nsgl.type.integer.Int;
@@ -575,7 +575,7 @@ public class BitArray implements Cloneable, Array<Boolean> {
 
   @Override
   public Boolean obtain(Integer index) throws NoSuchElementException {
-	  if( index<0 || index>=size() ) throw NoSuchElement.exception( NoSuchElement.INDEXOUTBOUNDS, index );
+	  if( index<0 || index>=size() ) throw NoSuch.exception( NoSuch.INDEXOUTBOUNDS, index );
 	  return get((int)index);
   }
 

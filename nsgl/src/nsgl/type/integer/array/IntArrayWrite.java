@@ -3,7 +3,7 @@ package nsgl.type.integer.array;
 import java.io.IOException;
 import java.io.Writer;
 
-import nsgl.service.Write;
+import nsgl.service.io.Write;
 
 public interface IntArrayWrite extends Write{
     /**

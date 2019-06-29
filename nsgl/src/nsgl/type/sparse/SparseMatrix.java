@@ -3,7 +3,7 @@ package nsgl.type.sparse;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import nsgl.exception.NoSuchElement;
+import nsgl.exception.NoSuch;
 import nsgl.type.collection.Indexed;
 import nsgl.type.sparse.matrix.SparseMatrixElement;
 import nsgl.type.sparse.matrix.SparseMatrixElementsIterator;
@@ -180,7 +180,7 @@ public class SparseMatrix<T> implements Indexed<int[],T>{
 		if(x!=null) return x;
 		Object[] obj = new Object[pos.length];
 		for( int i=0; i<obj.length; i++ ) obj[i] = pos[i];
-		throw NoSuchElement.exception(NoSuchElement.INVALIDLOCATION, obj);
+		throw NoSuch.exception(NoSuch.NOSUCHELEMENT, obj);
 	}
 
 	public int[] low(){

@@ -1,6 +1,6 @@
 package nsgl.type.real;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Compares to Doubles</p>

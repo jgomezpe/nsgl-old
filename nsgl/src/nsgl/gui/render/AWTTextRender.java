@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 
-import nsgl.vc.Side;
+import nsgl.app.side.Side;
 
 public class AWTTextRender extends JPanel implements TextRender{
 	protected String id;

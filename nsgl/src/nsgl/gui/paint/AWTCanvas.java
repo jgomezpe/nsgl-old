@@ -12,7 +12,7 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import nsgl.io.FileResource;
+import nsgl.service.io.FileResource;
 import nsgl.type.keymap.HashMap;
 
 public class AWTCanvas extends Canvas{

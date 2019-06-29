@@ -1,7 +1,7 @@
 package nsgl.search.multilevel;
 
 import nsgl.search.Goal;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 public class MultiLevelGoal<G,P,R> extends Goal<G,R>{
 	protected Goal<P,R> goal;

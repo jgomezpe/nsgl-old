@@ -6,7 +6,7 @@ package nsgl.type.real.sparse;
 
 import java.io.IOException;
 
-import nsgl.service.Read;
+import nsgl.service.io.Read;
 import nsgl.type.collection.iterator.Backable;
 import nsgl.type.integer.IntRead;
 import nsgl.type.integer.PlainIntRead;

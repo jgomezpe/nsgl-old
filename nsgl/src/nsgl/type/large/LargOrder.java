@@ -1,6 +1,6 @@
 package nsgl.type.large;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 public class LargOrder implements Order {
 

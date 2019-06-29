@@ -2,7 +2,7 @@ package nsgl.type.real;
 
 import java.io.IOException;
 
-import nsgl.service.Read;
+import nsgl.service.io.Read;
 import nsgl.type.collection.iterator.Backable;
 
 public interface RealRead extends Read{

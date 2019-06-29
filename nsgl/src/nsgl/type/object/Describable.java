@@ -38,8 +38,8 @@
  */
 package nsgl.type.object;
 
-import nsgl.cast.Cast;
-import nsgl.cast.toDescribable;
+import nsgl.type.object.cast.Cast;
+import nsgl.type.object.cast.toDescribable;
 /**
  * <p>Title: Describable</p>
  *

@@ -4,7 +4,7 @@ import javax.swing.JScrollPane;
 import javax.swing.text.JTextComponent;
 
 import nsgl.gui.editor.AWTEditor;
-import nsgl.io.Tokenizer;
+import nsgl.language.Lexer;
 import nsgl.type.keymap.KeyMap;
 
 public class SimpleAWTEditor extends AWTEditor{
@@ -23,6 +23,6 @@ public class SimpleAWTEditor extends AWTEditor{
 	}
 	
 	@SuppressWarnings("unchecked")
-	public void setTokenizer( Tokenizer tokenizer, KeyMap<Integer, ?> converter ){ ((SyntaxEditPanel)editArea).setTokenizer(tokenizer, (KeyMap<Integer, String>)converter); }
+	public void setLexer( Lexer tokenizer, KeyMap<Character, ?> converter ){ ((SyntaxEditPanel)editArea).setLexer(tokenizer, (KeyMap<Character, String>)converter); }
 	
 }

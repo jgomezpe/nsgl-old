@@ -3,9 +3,9 @@ package nsgl.gui.editor;
 import javax.swing.JScrollPane;
 import javax.swing.text.JTextComponent;
 
-import nsgl.io.Tokenizer;
+import nsgl.app.DefaultComponent;
+import nsgl.language.Lexer;
 import nsgl.type.keymap.KeyMap;
-import nsgl.vc.DefaultComponent;
 
 public abstract class AWTEditor extends DefaultComponent implements EditorView{
 	protected JTextComponent editArea=null;
@@ -62,5 +62,5 @@ public abstract class AWTEditor extends DefaultComponent implements EditorView{
 		return new int[]{row,column}; 
 	}
 	
-	public abstract void setTokenizer( Tokenizer tokenizer, KeyMap<Integer, ?> converter );
+	public abstract void setLexer( Lexer lexer, KeyMap<Character, ?> converter );
 }

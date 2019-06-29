@@ -1,7 +1,7 @@
 package nsgl.search.population;
 
 import nsgl.search.RealValuedGoal;
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 import nsgl.type.object.Tagged;
 
 public class RealValuedPopulationGoal<T>{

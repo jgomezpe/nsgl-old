@@ -8,9 +8,10 @@ package nsgl.search.local;
 import nsgl.math.logic.Predicate;
 import nsgl.search.Goal;
 import nsgl.search.space.Space;
-import nsgl.service.Tracer;
-import nsgl.tracer.Count;
+import nsgl.service.trace.Count;
+import nsgl.service.trace.Tracer;
 import nsgl.type.object.Tagged;
+import nsgl.type.object.Traceable;
 
 /**
  *
@@ -30,8 +31,8 @@ public class IterativeLocalSearch<T,R> extends LocalSearch<T,R> {
 	@Override
     public void setGoal(Goal<T,R> goal){ 
 		step.setGoal(goal); 
-		t.start();
-		Service.register(t, goal);		
+		t.clear();
+		Traceable.cast(goal).addTracer(t);		
 	}
         
 	@Override 
@@ -44,12 +45,13 @@ public class IterativeLocalSearch<T,R> extends LocalSearch<T,R> {
 	@Override
 	public Tagged<T> apply(Tagged<T> x, Space<T> space) {
         terminationCondition.init();
-		t.start();
-		Service.register(t, this.goal());		
-        trace(t.get(), x);
+		t.clear();
+		Traceable.cast(this.goal()).addTracer(t);
+		Traceable tr = Traceable.cast(this);
+        tr.trace(t.get(), x);
         while( terminationCondition.evaluate(x) ){
             x = step(x, space);
-            trace(t.get(), x);
+            tr.trace(t.get(), x);
         }
         return x;
 	}

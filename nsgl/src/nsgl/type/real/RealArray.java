@@ -2,7 +2,7 @@ package nsgl.type.real;
 
 import java.util.NoSuchElementException;
 
-import nsgl.exception.NoSuchElement;
+import nsgl.exception.NoSuch;
 import nsgl.type.array.Array;
 import nsgl.type.array.Fibo;
 
@@ -84,7 +84,7 @@ public class RealArray extends Fibo implements Array<Double>{
 
 	@Override
 	public Double obtain(Integer index) throws NoSuchElementException{ 
-		  if( index<0 || index>=size() ) throw NoSuchElement.exception( NoSuchElement.INDEXOUTBOUNDS, index );
+		  if( index<0 || index>=size() ) throw NoSuch.exception( NoSuch.INDEXOUTBOUNDS, index );
 		  return get((int)index);
 	}
 

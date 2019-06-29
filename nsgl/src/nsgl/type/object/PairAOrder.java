@@ -38,7 +38,7 @@
  */
 package nsgl.type.object;
 
-import nsgl.service.Order;
+import nsgl.service.sort.Order;
 
 /**
  * <p>Title: KeyOrder</p>

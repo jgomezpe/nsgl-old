@@ -1,7 +1,7 @@
 package nsgl.gui.paint;
 
 public interface Drawable {
-	Command draw();
+	PaintCommand draw();
 	default void draw(Canvas canvas){
 		canvas.command(draw());
 	}

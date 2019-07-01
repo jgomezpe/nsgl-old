@@ -1,7 +1,7 @@
 package nsgl.agents.examples.labyrinth.teseo.simple;
-import nsgl.gui.io.FileFilter;
-import nsgl.gui.log.*;
 import nsgl.java.JavaOS;
+import nsgl.java.awt.FileFilter;
+import nsgl.java.awt.LogPanel;
 
 import java.io.*;
 import java.awt.*;

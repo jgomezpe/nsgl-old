@@ -1,7 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
-
 public interface FrontEnd extends Side{
 	public static final String FRONTEND = "unalcol.vc.FrontEnd";	
 	public static final String VIEW = "view";	

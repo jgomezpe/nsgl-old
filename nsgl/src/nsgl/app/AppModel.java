@@ -1,6 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
 import nsgl.type.collection.Collection;
 
 //Unalcol definitions Pack 1.0 by Jonatan Gomez-Perdomo

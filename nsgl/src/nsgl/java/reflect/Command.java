@@ -4,7 +4,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 
+import nsgl.exception.IO;
+import nsgl.language.Token;
+import nsgl.language.lexeme.IDLexeme;
 import nsgl.service.io.FileResource;
+import nsgl.type.array.ArrayUtil;
 import nsgl.type.array.Vector;
 
 public class Command {
@@ -12,6 +16,34 @@ public class Command {
 	protected String id;
 	protected String method;
 	protected Object[] args;
+	
+	public Command( String command ) throws Exception{
+		IDLexeme id = new IDLexeme();
+		Token t = id.token(command);
+		if( t == null ) throw IO.exception(IO.UNEXPECTED, command, 0 );
+		this.id = t.value();
+		int n = this.id.length();
+		command = command.substring(n);
+		if( command.charAt(0)!='.') throw IO.exception(IO.UNEXPECTED, command.charAt(0), t.value() );
+		n++;
+		command = command.substring(1);
+		t = id.token(command);
+		if( t == null ) throw IO.exception(IO.UNEXPECTED, command, n );
+		method = t.value();
+		n += method.length();
+		command = command.substring(method.length());
+		if(command.charAt(0)!='(') throw IO.exception(IO.UNEXPECTED, command.charAt(0), n );
+		int m = command.length()-1;
+		if(command.charAt(m)!=')') throw IO.exception(IO.UNEXPECTED, command.charAt(m), n+m );
+		command = "[" + command.substring(1, m-1) + ']';
+		args = ArrayUtil.parse(command);
+	}
+	
+	public Command( String id, String method, Object... args ) {
+		this.id = id;
+		this.method = method;
+		this.args = args;
+	}
 	
 	public Command( String id, String method, InputStream is ){
 		this.id = id;
@@ -83,5 +115,17 @@ public class Command {
 		Method m ;
 		m = cl.getClass().getMethod(method, types);
 		return m.invoke(cl, args);
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(id);
+		sb.append('.');
+		sb.append(method);
+		sb.append('(');
+		String a = ArrayUtil.store(args);
+		sb.append(a.substring(1,a.length()-1));
+		sb.append(')');
+		return sb.toString();
 	}
 }

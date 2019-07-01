@@ -1,7 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
-
 public interface Controller extends Component{
 	default FrontEnd front(){
 		Side s = side();

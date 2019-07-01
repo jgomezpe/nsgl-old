@@ -1,7 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
-
 public interface BackEnd extends Side {
 	public static final String BACKEND = "unalcol.vc.BackEnd";
 	public static final String CONTROLLER = "controller";

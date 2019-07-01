@@ -3,8 +3,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import nsgl.app.Controller;
-import nsgl.app.js.JSFrontEnd;
 import nsgl.java.reflect.Command;
+import nsgl.js.JSFrontEnd;
 import nsgl.service.io.FileResource;
 import nsgl.type.array.Vector;
 

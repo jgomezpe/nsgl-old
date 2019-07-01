@@ -1,6 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
 import nsgl.type.object.Thing;
 
 public class DefaultComponent extends Thing implements Component{

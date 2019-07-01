@@ -21,7 +21,7 @@ public abstract class Lexeme {
 	
 	public Token token( String input ){
 		Matcher matcher = pattern.matcher(input); 
-		if( matcher.find() && matcher.group().length()==input.length() ) return new Token(type, 0, input);
+		if( matcher.find() ) return new Token(type, 0, matcher.group());
 		return null;
 	}
 	

@@ -1,7 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
-
 public interface View extends Component{
 	default BackEnd back(){
 		Side s = side();

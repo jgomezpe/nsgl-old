@@ -1,6 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
 import nsgl.type.array.Array;
 import nsgl.type.object.Named;
 

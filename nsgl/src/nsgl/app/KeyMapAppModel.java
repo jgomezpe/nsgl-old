@@ -1,6 +1,5 @@
 package nsgl.app;
 
-import nsgl.app.side.Side;
 import nsgl.type.collection.Collection;
 import nsgl.type.keymap.HashMap;
 

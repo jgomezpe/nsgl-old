@@ -8,7 +8,7 @@ import nsgl.agents.*;
 import nsgl.agents.examples.labyrinth.*;
 import nsgl.agents.examples.labyrinth.teseo.simple.*;
 import nsgl.agents.simulate.util.*;
-import nsgl.gui.log.LogOutputStream;
+import nsgl.java.awt.LogOutputStream;
 
 /**
  * Title:

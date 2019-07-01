@@ -30,7 +30,7 @@ public class LexemeSet {
 		Token tf = null;
 		for( Lexeme l:lexemes ) {
 			Token t = l.token(input);
-			if( t!=null && l.priority() > priority ){
+			if( t!=null && t.value().length()==input.length() && l.priority() > priority ){
 				t.pos = offset;
 				priority = l.priority();
 				tf = t;

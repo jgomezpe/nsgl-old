@@ -19,70 +19,70 @@ public abstract class Canvas{
 	}
 	
 	public Canvas(){
-		primitives.set(Command.COMPOUND,0);
-		primitives.set(Command.MOVETO,1);
-		primitives.set(Command.LINETO,2);
-		primitives.set(Command.QUADTO,3);
-		primitives.set(Command.CURVETO,4);
-		primitives.set(Command.TEXT,5);
-		primitives.set(Command.IMAGE,6);
-		primitives.set(Command.BEGIN,7);
-		primitives.set(Command.CLOSE,8);
-		primitives.set(Command.STROKE,9);
-		primitives.set(Command.FILL,10);
-		primitives.set(Command.STROKESTYLE,11);
-		primitives.set(Command.FILLSTYLE,12);
-		primitives.set(Command.LINE,13);
-		primitives.set(Command.POLYLINE,14);
-		primitives.set(Command.POLYGON,15);
+		primitives.set(PaintCommand.COMPOUND,0);
+		primitives.set(PaintCommand.MOVETO,1);
+		primitives.set(PaintCommand.LINETO,2);
+		primitives.set(PaintCommand.QUADTO,3);
+		primitives.set(PaintCommand.CURVETO,4);
+		primitives.set(PaintCommand.TEXT,5);
+		primitives.set(PaintCommand.IMAGE,6);
+		primitives.set(PaintCommand.BEGIN,7);
+		primitives.set(PaintCommand.CLOSE,8);
+		primitives.set(PaintCommand.STROKE,9);
+		primitives.set(PaintCommand.FILL,10);
+		primitives.set(PaintCommand.STROKESTYLE,11);
+		primitives.set(PaintCommand.FILLSTYLE,12);
+		primitives.set(PaintCommand.LINE,13);
+		primitives.set(PaintCommand.POLYLINE,14);
+		primitives.set(PaintCommand.POLYGON,15);
 	}
 
-	public abstract void moveTo( Command c );
-	public abstract void lineTo( Command c );
-	public abstract void quadTo( Command c );
-	public abstract void curveTo( Command c );
-	public abstract void image( Command c );
-	public abstract void text( Command c );
+	public abstract void moveTo( PaintCommand c );
+	public abstract void lineTo( PaintCommand c );
+	public abstract void quadTo( PaintCommand c );
+	public abstract void curveTo( PaintCommand c );
+	public abstract void image( PaintCommand c );
+	public abstract void text( PaintCommand c );
 	public abstract void beginPath();
 	public abstract void closePath();
-	public abstract void strokeStyle( Command c );
-	public abstract void fillStyle( Command c );
+	public abstract void strokeStyle( PaintCommand c );
+	public abstract void fillStyle( PaintCommand c );
 	public abstract void stroke();
 	public abstract void fill();
 
-	public void compound( Command c ){
-		Command[] commands =c.commands();
-		for( Command v : commands ){ command(v); }
+	public void compound( PaintCommand c ){
+		PaintCommand[] commands =c.commands();
+		for( PaintCommand v : commands ){ command(v); }
 	}
 	
-	public void line( Command c ){
-		double[] x = c.getRealArray(Command.X);
-		double[] y = c.getRealArray(Command.Y);
+	public void line( PaintCommand c ){
+		double[] x = c.getRealArray(PaintCommand.X);
+		double[] y = c.getRealArray(PaintCommand.Y);
 		beginPath();
-		moveTo(Command.moveTo(x[0],y[0]));
-		lineTo(Command.lineTo(x[1],y[1]));
+		moveTo(PaintCommand.moveTo(x[0],y[0]));
+		lineTo(PaintCommand.lineTo(x[1],y[1]));
 		stroke();		
 	}
 
-	protected void poly( Command c ){
+	protected void poly( PaintCommand c ){
 		beginPath();
-		double[] x = c.getRealArray(Command.X);
-		double[] y = c.getRealArray(Command.Y);
-		moveTo(Command.moveTo(x[0],y[0]));
-		for( int i=1; i<x.length; i++) lineTo(Command.lineTo(x[i],y[i]));
+		double[] x = c.getRealArray(PaintCommand.X);
+		double[] y = c.getRealArray(PaintCommand.Y);
+		moveTo(PaintCommand.moveTo(x[0],y[0]));
+		for( int i=1; i<x.length; i++) lineTo(PaintCommand.lineTo(x[i],y[i]));
 	}
 	
-	public void polyline( Command c ){
+	public void polyline( PaintCommand c ){
 		poly(c);
 		stroke();
 	}
 
-	public void polygon( Command c ){
+	public void polygon( PaintCommand c ){
 		poly(c);
 		fill();
 	}
 	
-	public void command( Command c ){
+	public void command( PaintCommand c ){
 		String type = c.type();
 		if( type == null ) return;
 		try{

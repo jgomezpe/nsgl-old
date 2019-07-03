@@ -1,9 +1,9 @@
 package nsgl.js;
 
 import nsgl.app.Controller;
-import nsgl.app.server.WebFrontEnd;
+import nsgl.app.QueueFrontEnd;
 
-public class JSFrontEnd extends WebFrontEnd{
+public class JSFrontEnd extends QueueFrontEnd{
 	
 	public JSFrontEnd(){ super(); }
 	

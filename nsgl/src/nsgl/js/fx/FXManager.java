@@ -12,10 +12,10 @@ import javafx.scene.web.WebEngine;
 import netscape.javascript.JSObject;
 import nsgl.app.BackEnd;
 import nsgl.app.Component;
-import nsgl.app.server.WebFrontEnd;
+import nsgl.app.QueueFrontEnd;
 import nsgl.java.reflect.Command;
 
-public class FXManager extends WebFrontEnd{
+public class FXManager extends QueueFrontEnd{
 	protected FXPanel panel;
 	
 	protected WebEngine webEngine;
@@ -54,7 +54,7 @@ public class FXManager extends WebFrontEnd{
 		BackEnd backend = backend();
 		if( backend != null && backend.hasChanged() && webEngine!=null ){
 			JSObject win = (JSObject)webEngine.executeScript("window");
-			for( Component c : backend.components() ){
+			for( Component c : backend ){
 				String[] ids = c.ids();
 				for( String id:ids ) win.setMember(id, c);
 			}

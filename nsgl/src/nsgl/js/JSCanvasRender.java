@@ -1,6 +1,6 @@
 package nsgl.js;
 
-import nsgl.gui.paint.Canvas;
+import nsgl.gui.Canvas;
 import nsgl.gui.paint.CanvasRender;
 import nsgl.gui.paint.Drawable;
 import nsgl.type.array.Vector;

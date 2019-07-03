@@ -6,7 +6,7 @@ public interface Controller extends Component{
 		if( s==null ) return null; 
 		AppModel m = s.model();
 		if( m==null ) return null;
-		return (FrontEnd)m.side(FrontEnd.FRONTEND);
+		return (FrontEnd)m.get(FrontEnd.FRONTEND);
 	}
 	
 	default BackEnd back(){ return (BackEnd)side(); }

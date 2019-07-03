@@ -1,34 +1,47 @@
 package nsgl.app;
 
-import nsgl.type.collection.Collection;
 import nsgl.type.keymap.HashMap;
 import nsgl.type.keymap.KeyMap;
 
-public class KeyMapSide extends DefaultSide{
+public class KeyMapSide extends HashMap<String, Component> implements Side{
+	protected String id;
 	protected boolean changed = false;
-	protected KeyMap<String, Component> keymap;
-	
+	protected AppModel model;
+
 	public KeyMapSide(String id){ this( id, new HashMap<String,Component>() ); }
 
 	public KeyMapSide(String id, KeyMap<String, Component> keymap){
-		super( id );
+		this.id = id;
 		init(keymap);
 	}
 
-	public void clear(){ keymap.clear(); }
+	@Override
+	public void setModel(AppModel model){ this.model = model; }
 
 	@Override
-	public Component component(String id){ try{ return keymap.get(id); }catch(Exception e){ return null; } }
-
+	public AppModel model(){ return model; }
+	
 	public void init(KeyMap<String, Component> keymap){
-		this.keymap = new HashMap<String,Component>();
-		for( Component c:keymap ) register(c);	
+		this.clear();		
+		for( Component c:keymap ) if(c.side()!=this) c.setSide(this);	
+	}
+	
+	@Override 
+	public boolean add( String c_id, Component c ) {
+		if(c.side()!=this) c.setSide(this);
+		return super.add(c_id, c);
+	}
+
+	@Override 
+	public boolean set( String c_id, Component c ) {
+		if(c.side()!=this) c.setSide(this);
+		return super.set(c_id, c);
 	}
 	
 	public void register(Component component){
 		changed = true;
 		String[] ids = component.ids();
-		for( String id:ids) keymap.set(id, component); 
+		for( String id:ids) this.set(id, component); 
 		component.setSide(this);
 	}
 	
@@ -36,5 +49,8 @@ public class KeyMapSide extends DefaultSide{
 	public void synchronize(){ changed = false; }
 
 	@Override
-	public Collection<Component> components(){ return keymap; }	
+	public String id(){ return this.id; }
+	
+	@Override
+	public void setId(String id) { this.id = id; }	
 }

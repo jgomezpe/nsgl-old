@@ -4,7 +4,7 @@ import javax.swing.JScrollPane;
 import javax.swing.text.JTextComponent;
 
 import nsgl.app.DefaultComponent;
-import nsgl.gui.editor.EditorView;
+import nsgl.gui.EditorView;
 import nsgl.language.Lexer;
 import nsgl.type.keymap.KeyMap;
 

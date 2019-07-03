@@ -3,7 +3,8 @@ package nsgl.gui.paint;
 import nsgl.type.object.Cleanable;
 import nsgl.type.collection.Collection;
 import nsgl.type.collection.Mutable;
-import nsgl.gui.render.Render;
+import nsgl.gui.Canvas;
+import nsgl.gui.Render;
 
 public interface CanvasRender extends Render{
 	public Mutable<Drawable> objects();

@@ -1,6 +1,6 @@
 package nsgl.js;
 
-import nsgl.gui.paint.Canvas;
+import nsgl.gui.Canvas;
 import nsgl.gui.paint.Color;
 import nsgl.gui.paint.PaintCommand;
 

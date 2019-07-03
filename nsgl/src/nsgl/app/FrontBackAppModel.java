@@ -14,6 +14,6 @@ public interface FrontBackAppModel extends AppModel{
 		}
 	}
 	
-	default BackEnd backend() { return (BackEnd)this.side(BackEnd.BACKEND); }
-	default FrontEnd frontend() { return (FrontEnd)this.side(FrontEnd.FRONTEND); }
+	default BackEnd backend() { return (BackEnd)this.get(BackEnd.BACKEND); }
+	default FrontEnd frontend() { return (FrontEnd)this.get(FrontEnd.FRONTEND); }
 }

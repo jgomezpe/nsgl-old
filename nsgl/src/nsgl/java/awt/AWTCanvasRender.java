@@ -7,7 +7,7 @@ import java.awt.Image;
 import javax.swing.JPanel;
 
 import nsgl.app.Side;
-import nsgl.gui.paint.Canvas;
+import nsgl.gui.Canvas;
 import nsgl.gui.paint.CanvasRender;
 import nsgl.gui.paint.Drawable;
 import nsgl.type.array.Vector;

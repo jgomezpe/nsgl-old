@@ -12,7 +12,7 @@ import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-import nsgl.gui.paint.Canvas;
+import nsgl.gui.Canvas;
 import nsgl.gui.paint.Color;
 import nsgl.gui.paint.ColorInstance;
 import nsgl.gui.paint.PaintCommand;

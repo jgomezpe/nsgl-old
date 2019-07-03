@@ -106,15 +106,14 @@ public class Command {
 	public Object arg( int i ){ return args[i]; }
 	public int arity(){ return args.length; }
 	
-	public Object run( Object obj  ) throws Exception{ return run(obj.getClass()); }
-	
-	public Object run( Class<?> cl ) throws Exception{
+	public Object run( Object obj ) throws Exception{
+		if( obj instanceof CommandProcessor ) return ((CommandProcessor)obj).process(this);
 		@SuppressWarnings("rawtypes")
 		Class[] types = new Class[args.length];
 		for( int k=0; k<types.length; k++ ) types[k] = args[k].getClass();
 		Method m ;
-		m = cl.getClass().getMethod(method, types);
-		return m.invoke(cl, args);
+		m = obj.getClass().getMethod(method, types);
+		return m.invoke(obj, args);
 	}
 	
 	public String toString() {

@@ -1,6 +1,6 @@
 package nsgl.app;
 
-import nsgl.type.collection.Collection;
+import nsgl.type.collection.Indexed;
 
 //Unalcol definitions Pack 1.0 by Jonatan Gomez-Perdomo
 //https://github.com/jgomezpe/unalcol/tree/master/core/
@@ -49,13 +49,13 @@ import nsgl.type.collection.Collection;
 * (E-mail: <A HREF="mailto:jgomezpe@unal.edu.co">jgomezpe at unal.edu.co</A> )
 * @version 1.0
 */
-public interface AppModel {
+public interface AppModel extends Indexed<String, Side>{
 	public static final String MODEL="unalcol.vc.Model";
-	public Side side( String id );
-	public Collection<Side> sides();
+
 	public void clear();
 	
 	default void register( Side side ){
 		if( side.model() != this ) side.setModel(this);
+		set(side.id(), side);
 	}
 }

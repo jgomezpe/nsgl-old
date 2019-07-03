@@ -1,6 +1,6 @@
 package nsgl.js;
 
-import nsgl.gui.editor.EditorView;
+import nsgl.gui.EditorView;
 
 public class JSEditorView extends JSView implements EditorView{
 	public JSEditorView(String id){ super("editor",id); }

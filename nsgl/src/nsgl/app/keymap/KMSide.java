@@ -1,16 +1,19 @@
-package nsgl.app;
+package nsgl.app.keymap;
 
+import nsgl.app.AppModel;
+import nsgl.app.Component;
+import nsgl.app.Side;
 import nsgl.type.keymap.HashMap;
 import nsgl.type.keymap.KeyMap;
 
-public class KeyMapSide extends HashMap<String, Component> implements Side{
+public class KMSide extends HashMap<String, Component> implements Side{
 	protected String id;
 	protected boolean changed = false;
 	protected AppModel model;
 
-	public KeyMapSide(String id){ this( id, new HashMap<String,Component>() ); }
+	public KMSide(String id){ this( id, new HashMap<String,Component>() ); }
 
-	public KeyMapSide(String id, KeyMap<String, Component> keymap){
+	public KMSide(String id, KeyMap<String, Component> keymap){
 		this.id = id;
 		init(keymap);
 	}

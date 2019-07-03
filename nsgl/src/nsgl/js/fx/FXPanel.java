@@ -17,7 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-import nsgl.app.FrontEnd;
+import nsgl.app.vc.FrontEnd;
 
 public class FXPanel extends JPanel{
 	/**

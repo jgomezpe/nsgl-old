@@ -10,9 +10,9 @@ import javax.swing.SwingUtilities;
 import javafx.application.Platform;
 import javafx.scene.web.WebEngine;
 import netscape.javascript.JSObject;
-import nsgl.app.BackEnd;
 import nsgl.app.Component;
-import nsgl.app.QueueFrontEnd;
+import nsgl.app.vc.BackEnd;
+import nsgl.app.vc.QueueFrontEnd;
 import nsgl.java.reflect.Command;
 
 public class FXManager extends QueueFrontEnd{

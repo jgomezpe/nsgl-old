@@ -1,10 +1,11 @@
-package nsgl.app;
+package nsgl.app.vc;
 
+import nsgl.app.keymap.KMSide;
 import nsgl.java.reflect.Command;
 import nsgl.type.array.Vector;
 
-public class QueueFrontEnd extends KeyMapSide implements FrontEnd{
-	public QueueFrontEnd(){ super(FrontEnd.FRONTEND); }
+public class QueueFrontEnd extends KMSide implements FrontEnd{
+	public QueueFrontEnd(){ super(FrontEnd.ID); }
 
 	protected Vector<String> commands_queue = new Vector<String>();
 

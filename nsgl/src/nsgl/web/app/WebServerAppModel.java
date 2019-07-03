@@ -1,9 +1,10 @@
 package nsgl.web.app;
 
-import nsgl.app.BackEnd;
-import nsgl.app.FrontBackAppModel;
-import nsgl.app.KeyMapAppModel;
-import nsgl.app.QueueFrontEnd;
+import nsgl.app.keymap.KMAppModel;
+import nsgl.app.keymap.KMBackEnd;
+import nsgl.app.vc.BackEnd;
+import nsgl.app.vc.VCAppModel;
+import nsgl.app.vc.QueueFrontEnd;
 import nsgl.java.reflect.Command;
 import nsgl.type.array.Vector;
 import nsgl.web.WebResponse;
@@ -12,11 +13,15 @@ import nsgl.web.WebSession;
 import nsgl.web.server.DynWebServer;
 import nsgl.web.server.DynWebServerAdaptee;
 
-public class WebServerAppModel extends KeyMapAppModel implements FrontBackAppModel, DynWebServerAdaptee{
+public class WebServerAppModel extends KMAppModel implements VCAppModel, DynWebServerAdaptee{
 	public static final String SERVER = "server";
 	public static final String PULL = "pull";
 	protected DynWebServer server;
 
+	public WebServerAppModel() { this( new KMBackEnd() ); }
+			
+	public WebServerAppModel(BackEnd backend) { this(backend, new QueueFrontEnd() ); }
+	
 	public WebServerAppModel(BackEnd backend, QueueFrontEnd frontend) {
 		init(backend, frontend); 
 		backend.register(this.main());
@@ -25,7 +30,7 @@ public class WebServerAppModel extends KeyMapAppModel implements FrontBackAppMod
 	public WebServerMainController main() { return new WebServerMainController(); }
 	
 	public WebResponse process(Command command) throws Exception {
-		Object obj = backend().execute(command);
+		Object obj = back().execute(command);
 		if( obj == null ) obj = "";
 		if( obj instanceof WebResponse ) return (WebResponse)obj;
 		return new WebResponse(obj.toString()); 	

@@ -1,8 +1,10 @@
-package nsgl.app;
+package nsgl.app.keymap;
 
+import nsgl.app.AppModel;
+import nsgl.app.Side;
 import nsgl.type.keymap.HashMap;
 
-public class KeyMapAppModel extends HashMap<String, Side> implements AppModel{
+public class KMAppModel extends HashMap<String, Side> implements AppModel{
 	@Override
 	public boolean set( String side_id, Side side ) {
 		side.setModel(this);

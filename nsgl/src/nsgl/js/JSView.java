@@ -2,7 +2,7 @@ package nsgl.js;
 import java.io.IOException;
 
 import nsgl.app.DefaultComponent;
-import nsgl.app.View;
+import nsgl.app.vc.View;
 import nsgl.java.reflect.Command;
 
 public class JSView extends DefaultComponent implements View{

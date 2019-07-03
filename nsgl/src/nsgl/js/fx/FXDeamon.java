@@ -2,7 +2,7 @@ package nsgl.js.fx;
 
 import java.io.IOException;
 
-import nsgl.app.FrontEnd;
+import nsgl.app.vc.FrontEnd;
 import nsgl.java.reflect.Command;
 
 public class FXDeamon extends Thread{

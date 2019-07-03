@@ -1,7 +1,7 @@
 package nsgl.js;
 
-import nsgl.app.Controller;
-import nsgl.app.QueueFrontEnd;
+import nsgl.app.vc.Controller;
+import nsgl.app.vc.QueueFrontEnd;
 
 public class JSFrontEnd extends QueueFrontEnd{
 	

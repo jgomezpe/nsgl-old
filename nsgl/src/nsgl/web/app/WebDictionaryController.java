@@ -1,7 +1,7 @@
 package nsgl.web.app;
 
-import nsgl.app.Controller;
 import nsgl.app.Side;
+import nsgl.app.vc.Controller;
 import nsgl.service.io.FileResource;
 import nsgl.type.json.Dictionary;
 import nsgl.type.json.JSON;
